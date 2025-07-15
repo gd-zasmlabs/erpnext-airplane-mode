@@ -1,0 +1,31 @@
+{
+  "doctype": "DocType",
+  "name": "Airplane Ticket Add-on Item",
+  "module": "Airplane Mode",
+  "custom": 0,
+  "is_child_table": 1,
+  "fields": [
+    {
+      "fieldname": "item",
+      "label": "Item",
+      "fieldtype": "Link",
+      "options": "Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "amount",
+      "label": "Amount",
+      "fieldtype": "Currency",
+      "default": "0"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

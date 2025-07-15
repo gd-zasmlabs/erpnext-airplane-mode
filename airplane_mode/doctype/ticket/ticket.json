@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-03 12:52:56.570738",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "passenger",
+  "flight",
+  "phone_no",
+  "email_id",
+  "departure_date",
+  "departure_time",
+  "status",
+  "section_break_ojjy",
+  "source_airport",
+  "destination_airport",
+  "column_break_wukq",
+  "aource_airport_code",
+  "destination_airport_code",
+  "section_break_lczy",
+  "add_on",
+  "route_price",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "passenger",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Passenger",
+   "options": "Flight Passenger",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Flight",
+   "options": "Airplane"
+  },
+  {
+   "fieldname": "departure_date",
+   "fieldtype": "Date",
+   "label": "Departure Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "label": "Departure Time",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "passenger.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "passenger.phone_no",
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ojjy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "source_airport",
+   "fieldtype": "Link",
+   "label": "Source Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "destination_airport",
+   "fieldtype": "Link",
+   "label": "Destination Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "column_break_wukq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "source_airport.code",
+   "fieldname": "aource_airport_code",
+   "fieldtype": "Data",
+   "label": "Source Airport Code"
+  },
+  {
+   "fetch_from": "destination_airport.code",
+   "fieldname": "destination_airport_code",
+   "fieldtype": "Data",
+   "label": "Destination Airport Code"
+  },
+  {
+   "fieldname": "section_break_lczy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_on",
+   "fieldtype": "Table",
+   "label": "Add On",
+   "options": "Airplane Ticket Add on"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nConfirmed\nCancelled\nChecked-in"
+  },
+  {
+   "fieldname": "route_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Route Price"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-04 11:22:37.889895",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Ticket",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,36 @@
+{
+  "label": "Airline",
+  "module": "airplane_mode",
+  "icon": "plane",
+  "content": [
+    {
+      "type": "doctype",
+      "name": "Airline"
+    },
+    {
+      "type": "doctype",
+      "name": "Airplane"
+    },
+    {
+      "type": "doctype",
+      "name": "Airport"
+    },
+    {
+      "type": "doctype",
+      "name": "Airplane Route Price"
+    },
+    {
+      "type": "doctype",
+      "name": "Ticket"
+    },
+    {
+      "type": "doctype",
+      "name": "Airplane Ticket Add-on Item"
+    },
+    {
+      "type": "doctype",
+      "name": "Airplane Flight"
+    }
+  ],
+  "public": 1
+}

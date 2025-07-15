@@ -1,0 +1,9 @@
+{
+  "app": "airplane_mode",
+  "module_name": "Airplane Mode",
+  "color": "#F39C12",
+  "icon": "octicon octicon-airplane",
+  "type": "module",
+  "is_custom": 0,
+  "label": "Airplane Mode"
+}

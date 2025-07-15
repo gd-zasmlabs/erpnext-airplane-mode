@@ -1,0 +1,59 @@
+{
+  "doctype": "Web Form",
+  "title": "Book Ticket",
+  "module": "airplane_mode",
+  "name": "book_ticket",
+  "doctype_name": "Ticket",
+  "route": "book-ticket",
+  "login_required": 1,
+  "published": 1,
+  "web_view": 1,
+  "web_form_fields": [
+    {
+      "fieldname": "passenger_name",
+      "label": "Passenger Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "flight",
+      "label": "Flight",
+      "fieldtype": "Link",
+      "options": "Airplane",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source_airport",
+      "label": "Source Airport",
+      "fieldtype": "Link",
+      "options": "Airport",
+      "reqd": 1
+    },
+    {
+      "fieldname": "destination_airport",
+      "label": "Destination Airport",
+      "fieldtype": "Link",
+      "options": "Airport",
+      "reqd": 1
+    },
+    {
+      "fieldname": "seat_number",
+      "label": "Seat Number",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "add_ons",
+      "label": "Add-ons",
+      "fieldtype": "Table",
+      "options": "Airplane Ticket Add-on Item"
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Total Amount",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "read_only": 1
+    }
+  ]
+}
+

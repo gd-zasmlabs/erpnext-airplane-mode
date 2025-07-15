@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>Available Flights</h1>
+<ul>
+    {% for flight in frappe.get_all('Airplane Flight', fields=['name', 'airplane', 'source_airport', 'destination_airport', 'date_of_departure', 'time_of_departure', 'duration'], filters={'is_published': 1}) %}
+        {% set airplane = frappe.get_doc("Airplane", flight.airplane) %}
+        <li>
+            {{ airplane.airline }} - {{ airplane.model }}<br>
+            From: {{ flight.source_airport }} → To: {{ flight.destination_airport }}<br>
+            Date: {{ frappe.utils.format_date(flight.date_of_departure, "d MMM, yyyy") }}<br>
+            Time: {{ flight.time_of_departure }}<br>
+            Duration: {{ frappe.utils.format_duration(flight.duration) }}<br>
+            <a href="/flights/{{ flight.name }}">View Flight</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

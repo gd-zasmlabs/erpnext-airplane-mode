@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>Available Flights</h1>
+<ul>
+  {% for doc in items %}
+    <li>
+      <strong>{{ frappe.get_doc("Airport", doc.source_airport).code }}</strong> →
+      <strong>{{ frappe.get_doc("Airport", doc.destination_airport).code }}</strong> |
+      {{ frappe.utils.format_date(doc.date_of_departure, "d MMM, yyyy") }} |
+      {{ frappe.utils.format_time(doc.departure_time) }} |
+      Duration: {{ frappe.utils.format_duration(doc.duration) }}
+      <br>
+      <a href="{{ doc.route }}">View Flight</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
